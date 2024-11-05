@@ -1,0 +1,167 @@
+/* home.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #333;
+}
+
+.assignment {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.assignment h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.assignment p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.due-date {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.no-assignments {
+    color: #888;
+    font-style: italic;
+}
+
+.logout-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.logout-button:hover {
+    background-color: #45a049;
+}
+/* home.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #333;
+}
+
+.assignment {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.assignment h3, .assignment h4 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.assignment p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.due-date {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.no-assignments {
+    color: #888;
+    font-style: italic;
+}
+
+.logout-button, .form-button, .cancel-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover, .form-button:hover, .cancel-button:hover {
+    background-color: #45a049;
+}
+
+.assignment-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.assignment-form input[type="text"],
+.assignment-form textarea,
+.assignment-form input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.edit-link, .delete-link {
+    color: #4CAF50;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.edit-link:hover, .delete-link:hover {
+    text-decoration: underline
+}
