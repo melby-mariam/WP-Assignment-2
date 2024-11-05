@@ -156,7 +156,7 @@ p {
     border-radius: 5px;
 }
 
-.edit-link, .delete-link {
+.edit-link, .delete-link, .select-link {
     color: #4CAF50;
     text-decoration: none;
     margin-right: 5px;

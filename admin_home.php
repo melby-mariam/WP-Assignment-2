@@ -47,6 +47,14 @@ if (isset($_GET['edit'])) {
     $result = mysqli_query($conn, "SELECT * FROM assignments WHERE id = $id");
     $edit_assignment = mysqli_fetch_assoc($result);
 }
+
+// Fetch assignment for display based on select
+$selected_assignment = null;
+if (isset($_GET['select'])) {
+    $id = intval($_GET['select']);
+    $result = mysqli_query($conn, "SELECT * FROM assignments WHERE id = $id");
+    $selected_assignment = mysqli_fetch_assoc($result);
+}
 ?>
 
 <!DOCTYPE html>
@@ -93,10 +101,32 @@ if (isset($_GET['edit'])) {
             echo "<p>" . htmlspecialchars($row['description']) . "</p>";
             echo "<p class='due-date'>Due Date: " . htmlspecialchars($row['due_date']) . "</p>";
             echo "<a href='admin_home.php?edit=" . $row['id'] . "' class='edit-link'>Edit</a> | ";
-            echo "<a href='admin_home.php?delete=" . $row['id'] . "' class='delete-link' onclick='return confirm(\"Are you sure you want to delete this assignment?\");'>Delete</a>";
+            echo "<a href='admin_home.php?delete=" . $row['id'] . "' class='delete-link' onclick='return confirm(\"Are you sure you want to delete this assignment?\");'>Delete</a> | ";
+            echo "<a href='admin_home.php?select=" . $row['id'] . "' class='select-link'>Select</a>";
             echo "</div>";
         }
         ?>
+
+        <!-- Display selected assignment details -->
+        <?php if ($selected_assignment): ?>
+            <h3>Selected Assignment Details</h3>
+            <table border="1" cellpadding="10">
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Due Date</th>
+                    <th>Posted By</th>
+                </tr>
+                <tr>
+                    <td><?php echo htmlspecialchars($selected_assignment['id']); ?></td>
+                    <td><?php echo htmlspecialchars($selected_assignment['title']); ?></td>
+                    <td><?php echo htmlspecialchars($selected_assignment['description']); ?></td>
+                    <td><?php echo htmlspecialchars($selected_assignment['due_date']); ?></td>
+                    <td><?php echo htmlspecialchars($selected_assignment['posted_by']); ?></td>
+                </tr>
+            </table>
+        <?php endif; ?>
 
         <a href="logout.php" class="logout-button">Logout</a>
     </div>
